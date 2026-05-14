@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vijit Labs — AI tools that fix what's costing you customers</title>
+  <meta name="description" content="Vijit Labs builds AI-powered tools for customer support and sales teams. Products used by professionals across Zendesk, Chrome, and the web." />
+  <meta property="og:title" content="Vijit Labs" />
+  <meta property="og:description" content="AI tools that fix what's costing you customers." />
+  <meta property="og:image" content="logo-full.png" />
+  <link rel="icon" type="image/png" href="logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:      #09090b;
+      --surface: #18181b;
+      --border:  #27272a;
+      --text:    #fafafa;
+      --muted:   #71717a;
+      --sub:     #a1a1aa;
+      --accent1: #ef4444;
+      --accent2: #f97316;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px; border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(9,9,11,0.85); backdrop-filter: blur(12px);
+    }
+    .nav-logo img { height: 36px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      font-size: 13px; font-weight: 600; padding: 8px 18px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff; border-radius: 8px; text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center; padding: 100px 24px 80px;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(239,68,68,0.07) 0%, transparent 70%);
+    }
+    .hero-eyebrow {
+      display: inline-block; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--accent2); margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 5.5vw, 64px); font-weight: 900;
+      letter-spacing: -2px; line-height: 1.07; margin-bottom: 22px;
+      max-width: 820px; margin-left: auto; margin-right: auto;
+    }
+    .hero h1 .grad {
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px; color: var(--sub); max-width: 520px;
+      margin: 0 auto 40px; line-height: 1.65;
+    }
+    .hero-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      font-size: 15px; font-weight: 600; padding: 13px 28px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff; border-radius: 10px; text-decoration: none;
+      transition: opacity 0.15s; display: inline-block;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-secondary {
+      font-size: 15px; font-weight: 500; padding: 13px 28px;
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border); border-radius: 10px;
+      text-decoration: none; transition: border-color 0.15s; display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--sub); }
+
+    /* ── STAT STRIP ── */
+    .stats {
+      display: flex; align-items: center; justify-content: center;
+      gap: 48px; flex-wrap: wrap;
+      padding: 36px 24px; border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 28px; font-weight: 900; letter-spacing: -0.5px; }
+    .stat-num .grad {
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 88px 24px; }
+    .section-label {
+      text-align: center; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--accent2); margin-bottom: 16px;
+    }
+    .section-title {
+      text-align: center; font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 900; letter-spacing: -1px; margin-bottom: 14px;
+    }
+    .section-sub {
+      text-align: center; font-size: 16px; color: var(--sub);
+      max-width: 500px; margin: 0 auto 56px; line-height: 1.65;
+    }
+
+    /* ── PRODUCTS ── */
+    .products-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; max-width: 1100px; margin: 0 auto;
+    }
+    .product-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 36px;
+      display: flex; flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .product-card:hover { transform: translateY(-4px); }
+    .card-escalation { border-color: rgba(239,68,68,0.25); }
+    .card-escalation:hover { border-color: rgba(239,68,68,0.55); }
+    .card-calllens  { border-color: rgba(16,185,129,0.25); }
+    .card-calllens:hover  { border-color: rgba(16,185,129,0.55); }
+    .card-scraper   { border-color: rgba(59,130,246,0.25); }
+    .card-scraper:hover   { border-color: rgba(59,130,246,0.55); }
+
+    .product-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 22px;
+    }
+    .icon-red   { background: linear-gradient(135deg, #ef4444, #f97316); }
+    .icon-green { background: linear-gradient(135deg, #10b981, #0891b2); }
+    .icon-blue  { background: linear-gradient(135deg, #3b82f6, #6366f1); }
+    .product-icon svg { width: 26px; height: 26px; fill: #fff; }
+
+    .product-platform {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      border-radius: 6px; padding: 3px 9px; margin-bottom: 14px;
+    }
+    .plat-zendesk { background: rgba(239,68,68,0.1); color: #fca5a5; }
+    .plat-chrome  { background: rgba(59,130,246,0.1); color: #93c5fd; }
+    .plat-web     { background: rgba(16,185,129,0.1); color: #6ee7b7; }
+
+    .product-name { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .product-desc { font-size: 14px; color: var(--sub); line-height: 1.65; margin-bottom: 24px; flex: 1; }
+
+    .product-features { list-style: none; margin-bottom: 30px; display: flex; flex-direction: column; gap: 9px; }
+    .product-features li { font-size: 13px; color: var(--sub); display: flex; align-items: flex-start; gap: 8px; }
+    .product-features li::before { content: '✓'; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .card-escalation .product-features li::before { color: #f97316; }
+    .card-calllens   .product-features li::before { color: #34d399; }
+    .card-scraper    .product-features li::before { color: #60a5fa; }
+
+    .product-link {
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: gap 0.15s;
+    }
+    .card-escalation .product-link { color: #f97316; }
+    .card-calllens   .product-link { color: #34d399; }
+    .card-scraper    .product-link { color: #60a5fa; }
+    .product-link:hover { gap: 10px; }
+
+    /* ── WHY VIJIT LABS ── */
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; max-width: 960px; margin: 0 auto;
+    }
+    .why-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px;
+    }
+    .why-icon { font-size: 28px; margin-bottom: 14px; }
+    .why-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .why-text  { font-size: 14px; color: var(--sub); line-height: 1.65; }
+
+    /* ── FOUNDER ── */
+    #about { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .founder-wrap {
+      max-width: 860px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: center;
+    }
+    .founder-avatar {
+      width: 100%; aspect-ratio: 1; border-radius: 20px;
+      background: linear-gradient(135deg, rgba(239,68,68,0.15), rgba(249,115,22,0.15));
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 72px; letter-spacing: -2px;
+    }
+    .founder-name  { font-size: 28px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 6px; }
+    .founder-title { font-size: 14px; color: var(--accent2); font-weight: 600; margin-bottom: 20px; }
+    .founder-bio   { font-size: 15px; color: var(--sub); line-height: 1.75; margin-bottom: 24px; }
+    .founder-links { display: flex; gap: 14px; flex-wrap: wrap; }
+    .founder-link  {
+      font-size: 13px; font-weight: 600; padding: 8px 16px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 8px; text-decoration: none; color: var(--text);
+      transition: border-color 0.15s;
+    }
+    .founder-link:hover { border-color: var(--sub); }
+
+    /* ── CONTACT ── */
+    .contact-wrap {
+      max-width: 640px; margin: 0 auto; text-align: center;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 56px 40px;
+    }
+    .contact-wrap .section-title { margin-bottom: 12px; }
+    .contact-wrap .section-sub   { margin-bottom: 32px; }
+    .contact-email {
+      font-size: 17px; font-weight: 700;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; text-decoration: none;
+    }
+    .contact-email:hover { opacity: 0.8; }
+    .contact-divider { margin: 24px auto; width: 40px; height: 1px; background: var(--border); }
+    .contact-socials { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .social-link {
+      font-size: 13px; font-weight: 600; padding: 8px 18px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 8px; text-decoration: none; color: var(--sub);
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .social-link:hover { color: var(--text); border-color: var(--sub); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 32px 48px; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo img { height: 28px; width: auto; opacity: 0.7; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 12px; color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .products-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .founder-wrap { grid-template-columns: 1fr; gap: 32px; }
+      .founder-avatar { max-width: 160px; font-size: 52px; }
+      footer { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 72px 20px 60px; }
+      section { padding: 64px 20px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .stats { gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <img src="logo-full.png" alt="Vijit Labs" />
+    </a>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://apps.vijit.in" target="_blank" rel="noopener">All Apps</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Vijit Labs · AI-Powered Software</p>
+    <h1>AI tools that fix what's<br/><span class="grad">costing you customers</span></h1>
+    <p class="hero-sub">Practical AI software for support teams, sales teams, and growing businesses. No bloat — just tools that work.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">View Products</a>
+      <a href="https://apps.vijit.in" target="_blank" rel="noopener" class="btn-secondary">Browse All Apps →</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num"><span class="grad">3</span></div>
+      <div class="stat-label">AI Products Shipped</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span class="grad">22+</span></div>
+      <div class="stat-label">Years in Service Delivery</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span class="grad">3</span></div>
+      <div class="stat-label">Platforms — Zendesk, Chrome, Web</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span class="grad">Solo</span></div>
+      <div class="stat-label">Founder-Built &amp; Operated</div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <p class="section-label">Products</p>
+    <h2 class="section-title">Built for professionals who don't have time to waste</h2>
+    <p class="section-sub">Each tool solves one problem precisely. No subscriptions you'll forget about — just software that earns its place.</p>
+
+    <div class="products-grid">
+
+      <!-- EscalationAI -->
+      <div class="product-card card-escalation">
+        <div class="product-icon icon-red">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        </div>
+        <span class="product-platform plat-zendesk">Zendesk App</span>
+        <h3 class="product-name">EscalationAI</h3>
+        <p class="product-desc">Real-time escalation risk scoring inside Zendesk. Spots angry customers before they escalate — so agents can act first, not react.</p>
+        <ul class="product-features">
+          <li>AI risk score on every ticket</li>
+          <li>Detects legal threats, manager requests, churn signals</li>
+          <li>Plain-English action recommendation</li>
+          <li>Works inside Zendesk — zero tab switching</li>
+        </ul>
+        <a href="https://escalationai.vijit.in" target="_blank" rel="noopener" class="product-link">
+          View EscalationAI <span>→</span>
+        </a>
+      </div>
+
+      <!-- CallLensAI -->
+      <div class="product-card card-calllens">
+        <div class="product-icon icon-green">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/></svg>
+        </div>
+        <span class="product-platform plat-web">Web App</span>
+        <h3 class="product-name">CallLensAI</h3>
+        <p class="product-desc">Upload a call recording and get a structured coaching report in seconds. Transcription, sentiment, CSAT risk — all in one page.</p>
+        <ul class="product-features">
+          <li>Deepgram transcription with speaker labels</li>
+          <li>Escalation risk score per call</li>
+          <li>Coaching insights for team leads</li>
+          <li>Shareable reports — no login for reviewers</li>
+        </ul>
+        <a href="https://calllens.vijit.in" target="_blank" rel="noopener" class="product-link">
+          View CallLensAI <span>→</span>
+        </a>
+      </div>
+
+      <!-- SalesScraper Pro -->
+      <div class="product-card card-scraper">
+        <div class="product-icon icon-blue">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+        </div>
+        <span class="product-platform plat-chrome">Chrome Extension</span>
+        <h3 class="product-name">SalesScraper Pro</h3>
+        <p class="product-desc">Extract leads from LinkedIn search results in one click. Names, titles, companies — downloaded as a clean CSV, ready for outreach.</p>
+        <ul class="product-features">
+          <li>Instant lead extraction from LinkedIn</li>
+          <li>Clean CSV export with one click</li>
+          <li>Works on LinkedIn search &amp; Sales Navigator</li>
+          <li>No LinkedIn account restrictions</li>
+        </ul>
+        <a href="https://sspro.vijit.in" target="_blank" rel="noopener" class="product-link">
+          View SalesScraper Pro <span>→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY VIJIT LABS -->
+  <section style="padding-top: 0; padding-bottom: 88px;">
+    <p class="section-label">Why Vijit Labs</p>
+    <h2 class="section-title">Built by someone who's lived the problem</h2>
+    <p class="section-sub">22 years in service delivery. These tools exist because I needed them — and couldn't find anything that actually worked.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h4 class="why-title">One job, done well</h4>
+        <p class="why-text">Every product solves one specific problem. No feature bloat, no upsells, no padded dashboards.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h4 class="why-title">Works where you work</h4>
+        <p class="why-text">Inside Zendesk, inside Chrome, inside your browser. No new tabs, no new logins, no workflow changes.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔒</div>
+        <h4 class="why-title">Secure by design</h4>
+        <p class="why-text">No ticket content stored. No customer data logged. Privacy-first architecture — not a policy bolted on later.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER / ABOUT -->
+  <section id="about">
+    <div class="founder-wrap">
+      <div>
+        <div class="founder-avatar">VK</div>
+      </div>
+      <div>
+        <p class="section-label" style="text-align:left; margin-bottom:12px;">Founder</p>
+        <h2 class="founder-name">Vijitkumar</h2>
+        <p class="founder-title">Founder, Vijit Labs · Service Delivery Leader</p>
+        <p class="founder-bio">
+          22 years leading customer support and service delivery operations across enterprise clients. I've watched support teams miss escalations, miss coaching moments, and miss leads — because the tools never quite fit the workflow.
+          <br/><br/>
+          Vijit Labs is my attempt to fix that. Every product started as something I would have used on day one. Built solo, shipped fast, and improved based on real feedback from real support professionals.
+        </p>
+        <div class="founder-links">
+          <a href="https://www.linkedin.com/in/vijitkumar" target="_blank" rel="noopener" class="founder-link">LinkedIn →</a>
+          <a href="https://vijit.in" target="_blank" rel="noopener" class="founder-link">Personal Site →</a>
+          <a href="mailto:vijitkumar@gmail.com" class="founder-link">Email →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-wrap">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Get in touch</h2>
+      <p class="section-sub">Questions about a product, partnership inquiry, or enterprise pricing — reach out directly.</p>
+      <a href="mailto:vijitkumar@gmail.com" class="contact-email">vijitkumar@gmail.com</a>
+      <div class="contact-divider"></div>
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/company/vijitlabs" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <a href="https://x.com/vijitlabs" target="_blank" rel="noopener" class="social-link">X / Twitter</a>
+        <a href="https://apps.vijit.in" target="_blank" rel="noopener" class="social-link">All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="logo-full.png" alt="Vijit Labs" />
+    </div>
+    <div class="footer-links">
+      <a href="https://escalationai.vijit.in/terms" target="_blank" rel="noopener">EscalationAI Terms</a>
+      <a href="https://calllens.vijit.in/terms" target="_blank" rel="noopener">CallLensAI Terms</a>
+      <a href="https://apps.vijit.in" target="_blank" rel="noopener">All Products</a>
+      <a href="mailto:vijitkumar@gmail.com">Contact</a>
+    </div>
+    <p class="footer-copy">© 2026 Vijit Labs. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
