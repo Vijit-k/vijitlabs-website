@@ -30,11 +30,13 @@
     /* ── NAV ── */
     nav {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 20px 48px; border-bottom: 1px solid var(--border);
+      padding: 20px 40px; border-bottom: 1px solid var(--border);
       position: sticky; top: 0; z-index: 100;
       background: rgba(9,9,11,0.85); backdrop-filter: blur(12px);
     }
-    .nav-logo img { height: 36px; width: auto; display: block; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo { width: 44px; height: 44px; display: flex; align-items: center; }
+    .nav-logo img { width: 44px; height: 44px; object-fit: contain; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
     .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color 0.15s; }
     .nav-links a:hover { color: var(--text); }
@@ -48,9 +50,11 @@
 
     /* ── HERO ── */
     .hero {
-      text-align: center; padding: 100px 24px 80px;
+      text-align: center; padding: 80px 20px 64px;
       background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(239,68,68,0.07) 0%, transparent 70%);
     }
+    .hero-tag { display: inline-block; margin-bottom: 24px; }
+    .hero-tag img { width: 180px; height: auto; }
     .hero-eyebrow {
       display: inline-block; font-size: 12px; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.12em;
@@ -244,7 +248,7 @@
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 16px;
     }
-    .footer-logo img { height: 28px; width: auto; opacity: 0.7; }
+    .footer-logo img { width: 32px; height: 32px; object-fit: contain; opacity: 0.6; }
     .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
     .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
     .footer-links a:hover { color: var(--text); }
@@ -272,8 +276,10 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">
-      <img src="logo-full.png" alt="Vijit Labs" />
+    <a href="#" class="nav-brand">
+      <div class="nav-logo">
+        <img src="logo-icon.png" alt="Vijit Labs" />
+      </div>
     </a>
     <div class="nav-links">
       <a href="#products">Products</a>
@@ -286,7 +292,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <p class="hero-eyebrow">Vijit Labs · AI-Powered Software</p>
+    <div class="hero-tag"><img src="logo-full.png" alt="Vijit Labs" /></div>
     <h1>AI tools that fix what's<br/><span class="grad">costing you customers</span></h1>
     <p class="hero-sub">Practical AI software for support teams, sales teams, and growing businesses. No bloat — just tools that work.</p>
     <div class="hero-actions">
@@ -450,7 +456,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">
-      <img src="logo-full.png" alt="Vijit Labs" />
+      <img src="logo-icon.png" alt="Vijit Labs" />
     </div>
     <div class="footer-links">
       <a href="https://escalationai.vijit.in/terms" target="_blank" rel="noopener">EscalationAI Terms</a>
