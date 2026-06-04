@@ -2,7 +2,7 @@
 layout: post
 title: "EscalationAI Is Heading to the Zendesk Marketplace. Here's What It Does and Why We Built It."
 subtitle: "A Zendesk app that scores escalation risk on every ticket, built to ISO 42001 standards. Now under review for the Zendesk Marketplace."
-date: 2026-06-04
+date: 2026-06-05
 category: Customer Support
 slug: escalationai-zendesk-marketplace
 cta_title: "Get Early Access to EscalationAI"
