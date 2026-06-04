@@ -1,0 +1,160 @@
+---
+layout: null
+title: Blog
+permalink: /blog/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <title>Blog | Vijit Labs</title>
+  <meta name="description" content="Insights on AI tools, sales productivity, customer support operations, and building software as a solo founder." />
+  <style>
+    .blog-hero {
+      background: #0f172a;
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .blog-eyebrow {
+      font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: #dc2626; margin-bottom: 20px;
+      display: block;
+    }
+    .blog-hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      color: #f1f5f9;
+      letter-spacing: -1.5px;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+    .blog-hero p {
+      font-size: 17px;
+      color: #94a3b8;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+    .blog-grid-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .post-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .post-card:hover {
+      transform: translateY(-4px);
+      border-color: #1e40af;
+    }
+    .post-card-tag {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: #dc2626;
+      background: rgba(220,38,38,0.08);
+      border-radius: 6px; padding: 3px 9px;
+      display: inline-block; margin-bottom: 16px;
+      width: fit-content;
+    }
+    .post-card-title {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .post-card-excerpt {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .post-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #94a3b8;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 16px;
+      margin-top: auto;
+    }
+    .post-card-read {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1e40af;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 80px 24px;
+      color: #64748b;
+    }
+    .empty-state h2 {
+      font-size: 20px; font-weight: 700;
+      color: #0f172a; margin-bottom: 8px;
+    }
+    @media (max-width: 900px) {
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  {% include nav.html %}
+
+  <div class="blog-hero">
+    <span class="blog-eyebrow">Vijit Labs Blog</span>
+    <h1>Straight talk on<br/>AI, sales and support ops</h1>
+    <p>No fluff. Just observations from building tools and working with support and sales teams for 22 years.</p>
+  </div>
+
+  <div class="blog-grid-wrap">
+    {% if site.posts.size > 0 %}
+    <div class="blog-grid">
+      {% for post in site.posts %}
+      <a href="{{ post.url }}" class="post-card">
+        {% if post.category %}
+        <span class="post-card-tag">{{ post.category }}</span>
+        {% endif %}
+        <h2 class="post-card-title">{{ post.title }}</h2>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        <div class="post-card-meta">
+          <span>{{ post.date | date: "%b %d, %Y" }}</span>
+          <span class="post-card-read">Read →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <h2>Posts coming soon</h2>
+      <p>First article is on its way.</p>
+    </div>
+    {% endif %}
+  </div>
+
+  {% include footer.html %}
+
+</body>
+</html>

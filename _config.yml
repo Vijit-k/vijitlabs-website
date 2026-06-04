@@ -1,0 +1,39 @@
+title: Vijit Labs
+description: AI tools for support teams and sales professionals. Built by Vijitkumar — 22 years in service delivery.
+url: "https://vijitlabs.com"
+baseurl: ""
+
+author:
+  name: Vijitkumar Kunhikandi
+  email: support@vijit.in
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:slug/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Feed
+feed:
+  path: feed.xml
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Vijitkumar Kunhikandi"

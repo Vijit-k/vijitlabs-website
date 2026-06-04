@@ -1,0 +1,16 @@
+<!-- _includes/nav.html -->
+<nav>
+  <a href="/" class="nav-brand">
+    <div class="nav-logo">
+      <img src="/logo-icon.png" alt="Vijit Labs" />
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="/#products">Products</a>
+    <a href="/blog/" class="{% if page.layout == 'post' or page.url == '/blog/' %}active{% endif %}">Blog</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="https://apps.vijit.in" target="_blank" rel="noopener">All Apps</a>
+    <a href="/#contact" class="nav-cta">Get in Touch</a>
+  </div>
+</nav>
