@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "EscalationAI Just Cleared Zendesk Marketplace Review. Here Is What It Took."
-subtitle: "Three submissions, two rejections, and one complete authentication rebuild later, EscalationAI is now in closed preview on the Zendesk Marketplace."
+title: "EscalationAI Has Been Approved by Zendesk. Public Listing Is Coming."
+subtitle: "After multiple submissions and a complete authentication rebuild, EscalationAI has cleared Zendesk Marketplace review. Early access is open now."
 date: 2026-06-16
 category: Customer Support
 slug: escalationai-zendesk-approved
 cta_title: "Get Early Access to EscalationAI"
-cta_text: "EscalationAI is in closed preview on the Zendesk Marketplace. Request early access and get it installed in your Zendesk account before the public listing opens."
+cta_text: "EscalationAI is approved by Zendesk and heading to public listing. Request early access and get it installed in your Zendesk account before the public listing opens."
 cta_url: "https://escalationai.vijit.in"
 cta_button: "Request Early Access"
 ---
 
-As of today, EscalationAI has cleared the Zendesk Marketplace review process and is now in closed preview. That means it has been reviewed, approved, and is being made available to early access users before the full public listing opens.
+EscalationAI has cleared the Zendesk Marketplace review process. The public listing is on its way. Early access is open right now for support teams who want in before it goes live.
 
 Getting here was not straightforward. This post covers what the journey actually looked like, because most product announcements skip the part where things did not work.
 
@@ -25,17 +25,17 @@ The goal is simple. Catch the tickets that are about to escalate before they do,
 
 ## The Zendesk Marketplace Review Process
 
-Zendesk takes its marketplace seriously. Every app goes through a manual review that checks the code quality, security implementation, API handling, data privacy compliance, and adherence to Zendesk's developer standards.
+Zendesk takes its marketplace seriously. Every app goes through a manual review that checks code quality, security implementation, API handling, data privacy compliance, and adherence to Zendesk's developer standards.
 
-For EscalationAI, it took three submissions to get through.
+For EscalationAI, it took multiple submissions to get through.
 
-The first submission (v1.0) was rejected with three specific blockers. The domain whitelist implementation was missing. The short description exceeded the 80-character limit. And the secure settings implementation did not follow Zendesk's required pattern.
+The first submission was rejected with three specific blockers. The domain whitelist implementation was missing. The short description exceeded the character limit. And the secure settings implementation did not follow Zendesk's required pattern.
 
 Each blocker was legitimate. None of them were vague. Zendesk's reviewer was specific about what needed to change and why.
 
-The second submission (v1.1) fixed all three blockers. This required a complete rebuild of the authentication layer. The correct pattern for Zendesk apps requires the frontend to retrieve the installation context via the ZAF SDK, send it to the backend, and resolve the API key from there. A shared authentication library was built, a new endpoint was added to handle installation resolution, and a setup page was created to manage the configuration flow.
+The fixes required a complete rebuild of the authentication layer. The correct pattern for Zendesk apps requires the frontend to retrieve the installation context via the ZAF SDK, send it to the backend, and resolve the API key from there. A shared authentication library was built, a new endpoint was added to handle installation resolution, and a setup page was created to manage the configuration flow.
 
-v1.1 passed review and is now in closed preview.
+That submission passed review. EscalationAI is now approved by Zendesk and the public listing is being processed.
 
 ## What ISO 42001 Alignment Means in Practice
 
@@ -47,18 +47,16 @@ Every AI decision is logged. Every risk score has an audit trail. The signals th
 
 For support teams operating under compliance requirements or with leadership that wants accountability over AI-assisted decisions, this matters. Most AI tools in the Zendesk ecosystem do not address governance at all.
 
-## What Closed Preview Means
+## What Early Access Means
 
-Closed preview is the stage between passing review and being publicly listed in the Zendesk Marketplace. The app has been approved. It is installable. But it is not yet discoverable by the general Zendesk user base.
+The public listing on the Zendesk Marketplace is being processed and will go live shortly. This is a manual process handled by the Zendesk Partner team.
 
-During closed preview, specific Zendesk accounts can be invited to install the app. This is the right stage to gather early installs, get real usage feedback, and collect the first reviews that will accompany the public listing.
+In the meantime, early access is open. If you manage a Zendesk support team and want EscalationAI installed before the public listing opens, reach out directly through the product page. Setup takes under 30 minutes and does not require changes to your existing Zendesk configuration.
 
-If you manage a Zendesk support team and want to be an early access user, this is the time to reach out. Early access users get direct input into what gets built next, and access before the public listing opens.
+Early access users get direct input into what gets built next and access before the general Zendesk user base.
 
 ## What Comes Next
 
-The next step is moving from closed preview to public listing. That requires gathering installs and reviews during the preview period.
+Once the public listing is live on the Zendesk Marketplace, EscalationAI will be discoverable by any Zendesk customer searching for escalation management tools. The app will continue to be actively developed with improvements informed by real usage feedback.
 
-A newer version of the app (v1.5.0) is also in the submission queue with five additional fixes including stronger ticket save handling, description length caps, and improved CORS safety for API calls. That version will go through the standard review process and will be submitted as an update once the public listing is live.
-
-If you are running a support team on Zendesk and escalations are a recurring problem, EscalationAI is worth a look. Early access is open. Setup takes under 30 minutes.
+If you are running a support team on Zendesk and escalations are a recurring problem, now is the right time to get in. Early access is open and the public listing is coming shortly.
