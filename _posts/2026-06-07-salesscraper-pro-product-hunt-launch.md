@@ -39,7 +39,7 @@ You can try the extension today at [sspro.vijit.in](https://sspro.vijit.in). The
 
 The pricing is straightforward. $49 one-time or $2,999 for lifetime access. No subscription. Seven-day refund policy if it does not work for your use case.
 
-If you do try it and run into any issues, email me directly at support@vijit.in. I read every message.
+If you do try it and run into any issues, email me directly at support@vijitlabs.com. I read every message.
 
 ---
 
