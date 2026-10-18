@@ -4,12 +4,12 @@ title: "What Zendesk's Marketplace Review Actually Teaches You About Building Se
 date: 2026-06-06
 author: Vijitkumar Kunhikandi
 categories: [product, escalationai, zendesk]
-excerpt: "EscalationAI's first submission was rejected. Three blockers, one non-trivial fix. Here is what the review process exposed about secure app architecture — and why getting rejected was useful."
+excerpt: "EscalationAI's first submission was rejected. Three blockers, one non-trivial fix. Here is what the review process exposed about secure app architecture, and why getting rejected was useful."
 ---
 
 EscalationAI's first Zendesk Marketplace submission came back with three blockers yesterday. Not a full rejection. Just: fix these, resubmit, and we will approve.
 
-It took about six hours to fix everything properly. Not because the changes were hard, but because one of the three blockers was pointing at something more structural — the way secure settings were being handled in the frontend.
+It took about six hours to fix everything properly. Not because the changes were hard, but because one of the three blockers was pointing at something more structural: the way secure settings were being handled in the frontend.
 
 Here is what happened, what was wrong, and what I changed.
 
@@ -91,7 +91,7 @@ EscalationAI v1.1 is submitted and under review. Changes in this version:
 - New `/api/resolve-installation` endpoint for one-time setup linking
 - Setup page live at escalationai.vijit.in/setup
 
-The ISO 42001 compliance features — audit trail, explainable AI, human override logging, bias monitoring — are all unchanged. The auth fix did not touch any of that.
+The ISO 42001 compliance features (audit trail, explainable AI, human override logging, bias monitoring) are all unchanged. The auth fix did not touch any of that.
 
 If you are building a Zendesk Marketplace app, the documentation on secure settings is worth reading before you write a single line of frontend code. The constraint shapes the architecture in a good direction.
 

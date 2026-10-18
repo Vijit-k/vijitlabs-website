@@ -11,9 +11,9 @@ cta_url: "https://sspro.vijit.in"
 cta_button: "Get SalesScraper Pro"
 ---
 
-Until this update, Extract Contact Info did one thing: it worked through your entire LinkedIn connections list, start to finish. Say you had 3,000 connections and, for example, only wanted phone and email for the sixty who work as operations managers in Berlin — you were still processing all 3,000. There was no way to say "just these people."
+Until this update, Extract Contact Info did one thing: it worked through your entire LinkedIn connections list, start to finish. Say you had 3,000 connections and, for example, only wanted phone and email for the sixty who work as operations managers in Berlin, you were still processing all 3,000. There was no way to say "just these people."
 
-I knew this was a limitation. I hadn't gotten around to fixing it, mostly because the obvious fix — build a filtering UI inside the extension, let people type in job titles and locations — felt like a bigger project than I had time for.
+I knew this was a limitation. I hadn't gotten around to fixing it, mostly because the obvious fix (build a filtering UI inside the extension, let people type in job titles and locations) felt like a bigger project than I had time for.
 
 Then I ran a live demo yesterday, and someone in the room asked the question directly: why does this have to run against everyone? One of my ex colleagues watched the tool work through a full connections list in real time and pointed out the obvious gap. Not as a formal feature request. Just an observation, mid-demo, about something that was clearly inefficient to watch.
 
