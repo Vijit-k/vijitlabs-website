@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-82H10LF273"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-82H10LF273');
+  </script>
+  <title>Zendesk Health Check | Vijit Labs Services</title>
+  <meta name="description" content="A fixed-scope Zendesk Health Check for support teams. Find what is slowing your agents down, missing SLAs and hiding in your reports. Report and 90-day fix plan in 5 working days." />
+  <link rel="canonical" href="https://vijitlabs.com/services" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://vijitlabs.com/services" />
+  <meta property="og:title"       content="Zendesk Health Check | Vijit Labs" />
+  <meta property="og:description" content="Find what is slowing your support team down. Report and 90-day fix plan in 5 working days." />
+  <meta property="og:image"       content="https://vijitlabs.com/logo-full.png" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Zendesk Health Check | Vijit Labs" />
+  <meta name="twitter:description" content="Find what is slowing your support team down. Report and 90-day fix plan in 5 working days." />
+  <meta name="twitter:image"       content="https://vijitlabs.com/logo-full.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Zendesk Health Check",
+    "serviceType": "Customer support operations consulting",
+    "provider": { "@type": "Organization", "name": "Vijit Labs", "url": "https://vijitlabs.com" },
+    "areaServed": "Worldwide",
+    "description": "Fixed-scope review of a Zendesk setup: ticket flow, automations, SLAs, macros and reporting, delivered as a written report with a 90-day fix plan."
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:      #f8fafc;
+      --surface: #ffffff;
+      --border:  #e2e8f0;
+      --text:    #0f172a;
+      --muted:   #64748b;
+      --sub:     #475569;
+      --accent2: #b91c1c;
+      --blue:    #1e40af;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    /* NAV (same as home) */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 40px; border-bottom: 1px solid #1e293b;
+      position: sticky; top: 0; z-index: 100; background: #0f172a;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 44px; height: 44px; object-fit: contain; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; color: #94a3b8; text-decoration: none; transition: color 0.15s; }
+    .nav-links a:hover, .nav-links a.active { color: #f1f5f9; }
+    .nav-cta { font-size: 13px; font-weight: 600; padding: 8px 18px; background: var(--blue); color: #fff !important; border-radius: 8px; }
+    .nav-cta:hover { opacity: 0.88; }
+    .nav-mobile-cta { display: none; }
+
+    /* HERO */
+    .hero { text-align: center; padding: 80px 20px 56px; }
+    .eyebrow {
+      display: inline-block; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--accent2); margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(34px, 5.5vw, 60px); font-weight: 900;
+      letter-spacing: -2px; line-height: 1.08; margin: 0 auto 22px; max-width: 820px;
+    }
+    .hero h1 .grad { color: var(--blue); }
+    .hero-sub { font-size: 18px; color: var(--sub); max-width: 580px; margin: 0 auto 36px; line-height: 1.65; }
+    .hero-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      font-size: 15px; font-weight: 600; padding: 13px 28px;
+      background: var(--blue); color: #fff; border-radius: 10px;
+      text-decoration: none; display: inline-block; transition: opacity 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-secondary {
+      font-size: 15px; font-weight: 500; padding: 13px 28px;
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border); border-radius: 10px;
+      text-decoration: none; display: inline-block; transition: border-color 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--sub); }
+    .hero-note { margin-top: 18px; font-size: 13px; color: var(--muted); }
+
+    /* STATS */
+    .stats {
+      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+      padding: 36px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 28px; font-weight: 900; letter-spacing: -0.5px; color: var(--blue); }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+    /* SECTIONS */
+    section { padding: 88px 24px; }
+    .section-label {
+      text-align: center; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent2); margin-bottom: 16px;
+    }
+    .section-title {
+      text-align: center; font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 900; letter-spacing: -1px; margin-bottom: 14px;
+    }
+    .section-sub { text-align: center; font-size: 16px; color: var(--sub); max-width: 540px; margin: 0 auto 48px; line-height: 1.65; }
+
+    /* PROBLEMS */
+    .problem-list { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .problem {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 20px 22px; font-size: 15px; color: var(--sub); line-height: 1.55;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .problem::before { content: '!'; flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: rgba(220,38,38,0.1); color: #dc2626; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+
+    /* OFFER CARD */
+    .offer {
+      max-width: 860px; margin: 0 auto; background: var(--surface);
+      border: 1px solid rgba(30,64,175,0.25); border-radius: 24px; padding: 44px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+    }
+    .offer h3 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--blue); margin-bottom: 18px; }
+    .checks { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .checks li { font-size: 15px; color: var(--sub); line-height: 1.5; display: flex; gap: 10px; }
+    .checks li::before { content: '✓'; color: var(--blue); font-weight: 800; flex-shrink: 0; }
+    .offer-meta {
+      grid-column: 1 / -1; display: flex; gap: 28px; flex-wrap: wrap;
+      padding-top: 26px; border-top: 1px solid var(--border);
+    }
+    .meta-item { font-size: 14px; color: var(--sub); }
+    .meta-item strong { display: block; font-size: 17px; color: var(--text); margin-bottom: 2px; }
+
+    /* STEPS */
+    .steps { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .step { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+    .step-num { width: 34px; height: 34px; border-radius: 10px; background: var(--blue); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .step-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .step-text { font-size: 14px; color: var(--sub); line-height: 1.6; }
+
+    /* ADD-ON */
+    .addon {
+      max-width: 860px; margin: 0 auto; background: #0f172a; color: #e2e8f0;
+      border-radius: 24px; padding: 40px 44px; display: flex; gap: 32px; align-items: center; flex-wrap: wrap;
+    }
+    .addon-body { flex: 1; min-width: 260px; }
+    .addon .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #93c5fd; margin-bottom: 10px; }
+    .addon h3 { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; color: #fff; margin-bottom: 10px; }
+    .addon p { font-size: 15px; color: #cbd5e1; line-height: 1.65; }
+    .addon a { color: #93c5fd; font-weight: 600; }
+
+    /* FOUNDER */
+    #about { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .founder-wrap { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: center; }
+    .founder-avatar { width: 100%; aspect-ratio: 1; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+    .founder-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .founder-name  { font-size: 28px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 6px; }
+    .founder-title { font-size: 14px; color: var(--accent2); font-weight: 600; margin-bottom: 18px; }
+    .founder-bio   { font-size: 15px; color: var(--sub); line-height: 1.75; margin-bottom: 16px; }
+    .creds { display: flex; gap: 8px; flex-wrap: wrap; }
+    .cred { font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: rgba(30,64,175,0.07); color: var(--blue); border: 1px solid rgba(30,64,175,0.18); }
+
+    /* FAQ */
+    .faq { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    details { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; }
+    summary { font-size: 16px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; color: var(--muted); font-weight: 600; }
+    details[open] summary::after { content: '−'; }
+    details p { font-size: 15px; color: var(--sub); line-height: 1.65; margin-top: 12px; }
+
+    /* CTA */
+    .cta-wrap {
+      max-width: 680px; margin: 0 auto; text-align: center; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 24px; padding: 56px 40px;
+    }
+    .cta-wrap .section-sub { margin-bottom: 30px; }
+    .cta-alt { margin-top: 18px; font-size: 14px; color: var(--muted); }
+    .cta-alt a { color: var(--blue); font-weight: 600; text-decoration: none; }
+
+    /* FOOTER */
+    footer { padding: 32px 48px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo img { width: 32px; height: 32px; object-fit: contain; opacity: 0.6; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 12px; color: var(--muted); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-mobile-cta { display: inline-block; }
+      .offer { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .founder-wrap { grid-template-columns: 1fr; gap: 28px; }
+      .founder-avatar { max-width: 160px; }
+      footer { flex-direction: column; align-items: flex-start; padding: 28px 20px; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 60px 16px 48px; }
+      section { padding: 60px 16px; }
+      .problem-list, .steps { grid-template-columns: 1fr; }
+      .stats { gap: 28px; }
+      .addon { padding: 32px 24px; }
+      .cta-wrap { padding: 40px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-brand"><div class="nav-logo"><img src="/logo-icon.png" alt="Vijit Labs" /></div></a>
+    <div class="nav-links">
+      <a href="/#products">Products</a>
+      <a href="/services" class="active">Services</a>
+      <a href="/#free-tools">Free Tools</a>
+      <a href="/#about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="#book" class="nav-cta">Book a Free Review</a>
+    </div>
+    <a href="#book" class="nav-cta nav-mobile-cta">Book a Free Review</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow">Service · Zendesk Health Check</span>
+    <h1>Your Zendesk should make your team faster.<br/><span class="grad">Is it slowing them down?</span></h1>
+    <p class="hero-sub">A fixed-scope review of your Zendesk setup by someone who has run support operations for 22+ years. You get a clear report and a 90-day fix plan in 5 working days.</p>
+    <div class="hero-actions">
+      <a href="#book" class="btn-primary">Book a free 30-minute review</a>
+      <a href="#whats-included" class="btn-secondary">See what's included</a>
+    </div>
+    <p class="hero-note">No obligation. If I can't find anything worth fixing, I'll tell you.</p>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="stat-num">22+</div><div class="stat-label">Years in support &amp; service delivery</div></div>
+    <div class="stat"><div class="stat-num">1 → 18</div><div class="stat-label">Global support team built</div></div>
+    <div class="stat"><div class="stat-num">300+</div><div class="stat-label">Implementations led</div></div>
+    <div class="stat"><div class="stat-num">95%+</div><div class="stat-label">CSAT maintained</div></div>
+  </div>
+
+  <!-- PROBLEMS -->
+  <section>
+    <p class="section-label">Sound familiar?</p>
+    <h2 class="section-title">Signs your Zendesk needs a check-up</h2>
+    <p class="section-sub">Most teams set Zendesk up once, then keep adding rules on top. A year later, nobody is sure why tickets go where they go.</p>
+    <div class="problem-list">
+      <div class="problem">Tickets land with the wrong group and bounce around before anyone owns them.</div>
+      <div class="problem">SLA breaches keep happening, and nobody can say exactly why.</div>
+      <div class="problem">Triggers and automations fire in the wrong order or cancel each other out.</div>
+      <div class="problem">Agents rewrite the same replies because macros are outdated or hard to find.</div>
+      <div class="problem">Reports show numbers, but leadership still can't see what is actually going wrong.</div>
+      <div class="problem">Angry customers escalate before anyone on the team notices the warning signs.</div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section id="whats-included" style="padding-top:0;">
+    <p class="section-label">What's included</p>
+    <h2 class="section-title">One review. One report. One plan.</h2>
+    <p class="section-sub">Fixed scope, fixed timeline. No open-ended consulting hours.</p>
+    <div class="offer">
+      <div>
+        <h3>What I review</h3>
+        <ul class="checks">
+          <li>Ticket flow, groups and routing rules</li>
+          <li>Triggers, automations and their firing order</li>
+          <li>SLA policies and why breaches happen</li>
+          <li>Macros, views and agent workspace setup</li>
+          <li>Reporting: what you track vs what you should track</li>
+          <li>Escalation handling and early-warning gaps</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What you get</h3>
+        <ul class="checks">
+          <li>A written health report, scored by area</li>
+          <li>Top issues ranked by impact on customers and agents</li>
+          <li>Quick wins your admin can fix in the first week</li>
+          <li>A 90-day fix plan with owners and order of work</li>
+          <li>A 45-minute walkthrough call with your team</li>
+        </ul>
+      </div>
+      <div class="offer-meta">
+        <div class="meta-item"><strong>5 working days</strong>from access to report</div>
+        <div class="meta-item"><strong>Fixed price</strong>agreed before work starts</div>
+        <div class="meta-item"><strong>Read-only access</strong>no changes made without your approval</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="padding-top:0;">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">Four steps, no surprises</h2>
+    <p class="section-sub">You stay in control of your instance throughout.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-title">Free 30-min call</div><p class="step-text">You describe what's hurting. I tell you honestly if a health check will help.</p></div>
+      <div class="step"><div class="step-num">2</div><div class="step-title">Scope &amp; price</div><p class="step-text">You get a short scope note and a fixed price. No hourly billing.</p></div>
+      <div class="step"><div class="step-num">3</div><div class="step-title">Review</div><p class="step-text">I review your setup with read-only access over 5 working days.</p></div>
+      <div class="step"><div class="step-num">4</div><div class="step-title">Report &amp; walkthrough</div><p class="step-text">You get the report, the 90-day plan and a call to walk your team through it.</p></div>
+    </div>
+  </section>
+
+  <!-- ADD-ON -->
+  <section style="padding-top:0;">
+    <div class="addon">
+      <div class="addon-body">
+        <p class="tag">Optional add-on</p>
+        <h3>AI readiness for your support team</h3>
+        <p>Want to add AI triage, suggested replies or escalation detection? I'll add a section on where AI will genuinely help your team, and where it will hurt quality. Includes a look at <a href="https://escalationai.vijit.in" target="_blank" rel="noopener">EscalationAI</a>, built by Vijit Labs for Zendesk, if it fits your needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="founder-wrap">
+      <div><div class="founder-avatar"><img src="/vijit-profile.png" alt="Vijitkumar Kunhikandi" /></div></div>
+      <div>
+        <p class="section-label" style="text-align:left; margin-bottom:12px;">Who does the review</p>
+        <h2 class="founder-name">Vijitkumar Kunhikandi</h2>
+        <p class="founder-title">Founder, Vijit Labs · Service Delivery Leader</p>
+        <p class="founder-bio">I've spent 22+ years running customer support and service delivery: building a global support team from 1 to 18, leading 300+ implementations, managing Zendesk consultants, and keeping CSAT above 95%. I also build Zendesk apps, so I know the platform from both the operations side and the technical side.</p>
+        <p class="founder-bio">You work with me directly. No junior staff, no hand-offs.</p>
+        <div class="creds">
+          <span class="cred">PMP</span><span class="cred">CSM</span><span class="cred">ITIL 4</span><span class="cred">GenAI Certified</span><span class="cred">Zendesk App Builder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <p class="section-label">Questions</p>
+    <h2 class="section-title">Before you book</h2>
+    <p class="section-sub">Short answers to what most people ask first.</p>
+    <div class="faq">
+      <details><summary>Do you need admin access to our Zendesk?</summary><p>Read-only or a light agent with view access is enough for most of the review. I will never change anything in your instance without your written approval.</p></details>
+      <details><summary>Is the 30-minute call really free?</summary><p>Yes. It's a working session on your actual problem. If a full health check won't help, I'll tell you that on the call.</p></details>
+      <details><summary>Can you also fix the issues you find?</summary><p>Yes, as a separate, fixed-price piece of work. Many teams prefer to have their own admin fix things using the 90-day plan, and that works too.</p></details>
+      <details><summary>What size of team is this for?</summary><p>It works best for teams with roughly 5 to 100 agents on Zendesk Suite or Support, where the setup has grown over time and nobody owns the full picture.</p></details>
+      <details><summary>Do you work with teams outside India?</summary><p>Yes. The review is fully remote, and calls are scheduled across time zones.</p></details>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section id="book" style="padding-top:0;">
+    <div class="cta-wrap">
+      <p class="section-label">Get started</p>
+      <h2 class="section-title">Book your free 30-minute review</h2>
+      <p class="section-sub">Tell me your team size and the one Zendesk problem that annoys you most. I'll reply within one working day.</p>
+      <a href="mailto:vijitkumar@vijit.in?subject=Zendesk%20Health%20Check%20-%20Free%20Review&body=Company%3A%0ATeam%20size%3A%0AZendesk%20plan%3A%0ABiggest%20problem%3A%0A" class="btn-primary">Email to book a review</a>
+      <p class="cta-alt">Prefer WhatsApp? <a href="https://wa.me/919539633566?text=Hi%20Vijit%2C%20I%27d%20like%20a%20free%20Zendesk%20review." target="_blank" rel="noopener">Message me here</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"><img src="/logo-icon.png" alt="Vijit Labs" /></div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="https://apps.vijit.in" target="_blank" rel="noopener">All Products</a>
+      <a href="/blog">Blog</a>
+      <a href="mailto:vijitkumar@vijit.in">Contact</a>
+    </div>
+    <p class="footer-copy">© 2026 Vijit Labs. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
